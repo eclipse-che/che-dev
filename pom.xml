@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2012-2015 Codenvy, S.A.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+
+    Contributors:
+      Codenvy, S.A. - initial API and implementation
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>maven-parent-pom</artifactId>
+        <groupId>org.eclipse.che.parent</groupId>
+        <version>3.7.8</version>
+        <relativePath />
+    </parent>
+    <groupId>com.codenvy.resources</groupId>
+    <artifactId>codenvy-dev-resources</artifactId>
+    <version>14-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Development Resources for Codenvy projects</name>
+    <modules>
+        <module>codenvy-eclipse-license-resource-bundle</module>
+        <module>codenvy-tomcat8-slf4j-logback</module>
+        <module>che-tomcat8-slf4j-logback</module>
+        <module>che-codestyle</module>
+    </modules>
+    <scm>
+        <connection>scm:git:git://github.com/codenvy/codenvy-dev-resources.git</connection>
+        <developerConnection>scm:git:git@github.com:codenvy/codenvy-dev-resources.git</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/codenvy/codenvy-dev-resources</url>
+    </scm>
+    <properties>
+        <javax.mail.version>1.4.4</javax.mail.version>
+        <logback.version>1.1.2</logback.version>
+        <slf4j.version>1.7.6</slf4j.version>
+        <tomcat8.version>8.0.29</tomcat8.version>
+    </properties>
+    <repositories>
+        <repository>
+            <id>codenvy-public-repo</id>
+            <name>codenvy public</name>
+            <url>https://maven.codenvycorp.com/content/groups/public/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>codenvy-public-repo</id>
+            <name>codenvy public</name>
+            <url>https://maven.codenvycorp.com/content/groups/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+</project>
