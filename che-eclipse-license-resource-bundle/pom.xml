@@ -16,7 +16,7 @@
     <parent>
         <artifactId>che-dev-resources-parent</artifactId>
         <groupId>org.eclipse.che.dev</groupId>
-        <version>14-SNAPSHOT</version>
+        <version>14</version>
     </parent>
     <artifactId>che-eclipse-license-resource-bundle</artifactId>
     <packaging>jar</packaging>
