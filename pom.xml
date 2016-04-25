@@ -21,7 +21,7 @@
     </parent>
     <groupId>org.eclipse.che.dev</groupId>
     <artifactId>che-dev-resources-parent</artifactId>
-    <version>15</version>
+    <version>16-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Development Resources for Codenvy projects</name>
     <modules>
@@ -31,7 +31,7 @@
     <scm>
         <connection>scm:git:git://github.com/eclipse/che-dev.git</connection>
         <developerConnection>scm:git:git@github.com:eclipse/che-dev.git</developerConnection>
-        <tag>15</tag>
+        <tag>HEAD</tag>
         <url>https://github.com/eclipse/che-dev</url>
     </scm>
     <repositories>
