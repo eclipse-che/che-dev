@@ -3,3 +3,8 @@ Eclipse Che is a next generation Eclipse IDE and open source alternative to Inte
 
 ## About This Module
 Development resources and tools for Eclipse Che
+
+NOTE: This project is deprecated, as its contents have moved here:
+
+https://github.com/eclipse/che-parent
+
