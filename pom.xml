@@ -15,7 +15,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eclipse.che.dev</groupId>
     <artifactId>che-dev-resources-parent</artifactId>
-    <version>16-SNAPSHOT</version>
+    <version>16</version>
     <packaging>pom</packaging>
     <name>Development Resources for Eclipse Che projects</name>
     <modules>
@@ -25,7 +25,7 @@
     <scm>
         <connection>scm:git:git://github.com/eclipse/che-dev.git</connection>
         <developerConnection>scm:git:git@github.com:eclipse/che-dev.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>16</tag>
         <url>https://github.com/eclipse/che-dev</url>
     </scm>
     <repositories>
