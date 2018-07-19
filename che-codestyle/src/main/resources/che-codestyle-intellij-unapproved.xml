@@ -8,6 +8,9 @@
 
     SPDX-License-Identifier: EPL-2.0
 
+    Contributors:
+      Red Hat, Inc. - initial API and implementation
+
 -->
 <code_scheme name="che-unapproved">
   <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="99" />
