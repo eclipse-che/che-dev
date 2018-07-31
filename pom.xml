@@ -29,6 +29,24 @@
         <url>http://www.eclipse.org/legal/epl-v20.html</url>
       </license>
     </licenses>
+    <developers>
+      <developer>
+        <id>skabashnyuk</id>
+        <name>Sergii Kabashniuk</name>
+        <email>skabashn@redhat.com</email>
+        <roles>
+          <role>developer</role>
+        </roles>
+      </developer>
+      <developer>
+        <id>riuvshin</id>
+        <name>Roman Iuvshyn</name>
+        <email>riuvshyn@redhat.com</email>
+        <roles>
+          <role>developer</role>
+        </roles>
+      </developer>
+    </developers>
     <modules>
         <module>che-eclipse-license-resource-bundle</module>
         <module>che-codestyle</module>
@@ -68,6 +86,15 @@
     <build>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>1.6</version>
+                    <configuration>
+                        <passphrase>${gpg.passphrase}</passphrase>
+                        <useAgent>true</useAgent>
+                    </configuration>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-gpg-plugin</artifactId>
