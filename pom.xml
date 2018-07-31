@@ -29,7 +29,7 @@
         <tag>HEAD</tag>
         <url>https://github.com/eclipse/che-dev</url>
     </scm>
-    <repositories>
+    <!--repositories>
         <repository>
             <id>codenvy-public-repo</id>
             <name>codenvy public</name>
@@ -42,14 +42,14 @@
             <name>codenvy public</name>
             <url>https://maven.codenvycorp.com/content/groups/public/</url>
         </pluginRepository>
-    </pluginRepositories>
+    </pluginRepositories-->
     <distributionManagement>
         <repository>
             <id>repo.codenvy.private</id>
             <url>${maven.releases.repo.url}</url>
         </repository>
         <snapshotRepository>
-            <id>repo.codenvy.private</id>
+            <id>ossrh</id>
             <url>${maven.snapshots.repo.url}</url>
         </snapshotRepository>
         <site>
@@ -58,9 +58,9 @@
         </site>
     </distributionManagement>
     <properties>
-        <maven.releases.repo.url>https://maven.codenvycorp.com/content/repositories/codenvy-public-releases/
+        <maven.releases.repo.url>https://oss.sonatype.org/service/local/staging/deploy/maven2/
         </maven.releases.repo.url>
-        <maven.snapshots.repo.url>https://maven.codenvycorp.com/content/repositories/codenvy-public-snapshots/
+        <maven.snapshots.repo.url>https://oss.sonatype.org/content/repositories/snapshots/
         </maven.snapshots.repo.url>
         <site.deploy.url>${site.url}</site.deploy.url>
         <site.url>https://www.eclipse.org/che/</site.url>
