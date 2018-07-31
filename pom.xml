@@ -31,7 +31,7 @@
     </scm>
     <distributionManagement>
         <repository>
-            <id>repo.codenvy.private</id>
+            <id>ossrh</id>
             <url>${maven.releases.repo.url}</url>
         </repository>
         <snapshotRepository>
@@ -39,7 +39,7 @@
             <url>${maven.snapshots.repo.url}</url>
         </snapshotRepository>
         <site>
-            <id>repo.codenvy.private</id>
+            <id>ossrh</id>
             <url>${site.deploy.url}</url>
         </site>
     </distributionManagement>
