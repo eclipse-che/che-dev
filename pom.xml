@@ -78,32 +78,33 @@
     <version.javadoc.plugin>2.10.2</version.javadoc.plugin>
     <version.deploy.plugin>2.8.2</version.deploy.plugin>
     <version.site.plugin>3.6</version.site.plugin>
+    <version.release.plugin>2.5.1</version.release.plugin>
+    <version.gpg.plugin>1.6</version.gpg.plugin>
   </properties>
   <build>
     <pluginManagement>
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-gpg-plugin</artifactId>
-          <version>1.6</version>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>${version.release.plugin}</version>
           <configuration>
-            <passphrase>${gpg.passphrase}</passphrase>
-            <useAgent>true</useAgent>
+            <!--  maven-release-plugin  -->
+            <goals>deploy</goals>
+            <useReleaseProfile>false</useReleaseProfile>
+            <autoVersionSubmodules>true</autoVersionSubmodules>
+            <arguments>-Pche-dev-release ${arguments}</arguments>
+            <tagNameFormat>@{project.version}</tagNameFormat>
           </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-gpg-plugin</artifactId>
-          <version>1.5</version>
-          <executions>
-            <execution>
-              <id>sign-artifacts</id>
-              <phase>verify</phase>
-              <goals>
-                <goal>sign</goal>
-              </goals>
-            </execution>
-          </executions>
+          <version>${version.gpg.plugin}</version>
+          <configuration>
+            <passphrase>${gpg.passphrase}</passphrase>
+            <useAgent>true</useAgent>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -131,4 +132,30 @@
       </plugins>
     </pluginManagement>
   </build>
+  <profiles>
+    <profile>
+      <id>che-dev-release</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>${version.gpg.plugin}</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
