@@ -17,7 +17,7 @@
   <parent>
     <artifactId>che-dev-resources-parent</artifactId>
     <groupId>org.eclipse.che.dev</groupId>
-    <version>20-SNAPSHOT</version>
+    <version>20</version>
   </parent>
   <artifactId>che-codestyle</artifactId>
   <packaging>jar</packaging>
